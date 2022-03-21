@@ -28,7 +28,7 @@
       <div class="feature-icon mb-3">
         <i class="fa-solid fa-video fa-2xl text-primary"></i>
       </div>
-      <h2>Video Chat</h2>
+      <h2>Watch Video</h2>
       <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
     </div>
     <div class="feature col">
@@ -37,6 +37,36 @@
       </div>
       <h2>Synchronized</h2>
       <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Chat Container -->
+<div class="container">
+  <h2 class="pb-2 border-bottom">Watch Now</h2>
+  <div class="py-4 d-grid gap-3" style="grid-template-columns: 4fr 2fr; min-height:500px; max-height: 500px;">
+    <div class="bg-light border rounded-3">
+      <br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <div class="bg-light border rounded-3 p-3">
+      <!-- username -->
+      <header>
+        <h5 class="text-center"><i class="fa fa-circle text-success" style="font-size: 9px"></i> Online Chat</h5>
+        <input type="text" class="form-control text-center" name="username" id="username" placeholder="Enter a username...">
+      </header>
+      <!-- messages -->
+      <div class="card mt-2 mb-2">
+        <div class="card-body">
+          <div id="messages" style="min-height: 280px;"></div>
+        </div>
+      </div>
+      <!-- send message -->
+      <form id="message-form">
+        <div class="input-group mb-3">
+          <input id="message-input" type="text" class="form-control" placeholder="Write a message..." aria-label="Write a message..." aria-describedby="message-send">
+          <button class="btn btn-primary" type="submit" id="message-send">Send Message</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>

@@ -20,6 +20,17 @@ Route::get('/', function () {
     return view('home-page');
 });
 
+Route::post('/send-message', function (Request $request) {
+    event(
+        new Message(
+            $request->input('username'),
+            $request->input('message')
+        )
+    );
+
+    return ["success" => true];
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
