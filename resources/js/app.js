@@ -1,4 +1,5 @@
 const { default: axios } = require('axios');
+const { message } = require('laravel-mix/src/Log');
 
 require('./bootstrap');
 
@@ -35,10 +36,13 @@ message_form.addEventListener('submit', function(e) {
         }
     }
 
-    axios(options);
+    axios(options)
+        .then(function (){
+            message_input.value = "";
+        });
 });
 
 window.Echo.channel('chat')
     .listen('.message', (e) => {
-        messages_el.innerHTML += '<div class="message"><strong>' + e.username + ':</strong>' + e.message + '</div>';
+        messages_el.innerHTML += '<div class="message" data-user="' + e.username + '"><strong>' + e.username + ':</strong>&nbsp;' + e.message + '</div>';
     });
