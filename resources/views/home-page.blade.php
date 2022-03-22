@@ -45,13 +45,14 @@
 <div class="container">
   <h2 class="pb-2 border-bottom">Watch Now</h2>
   <div class="py-4 d-grid gap-3" style="grid-template-columns: 4fr 2fr; min-height:500px; max-height: 500px;">
-    <div class="bg-light border rounded-3">
-      <br><br><br><br><br><br><br><br><br><br>
+    <div class="bg-dark border rounded-3 p-3">
+      <input id="message-input" type="text" class="form-control" placeholder="Paste link from YouTube: https://www.youtube.com/watch?v=0iK0yevab-k">
+      <div id="player"></div>
     </div>
-    <div class="bg-light border rounded-3 p-3">
+    <div class="bg-dark border rounded-3 p-3">
       <!-- username -->
       <header>
-        <h5 class="text-center"><i class="fa fa-circle text-success" style="font-size: 9px"></i> Online Chat</h5>
+        <h5 class="text-center text-light"><i class="fa fa-circle text-success" style="font-size: 9px"></i> Online Chat</h5>
         <input type="text" class="form-control text-center" name="username" id="username" placeholder="Enter a username...">
       </header>
       <!-- messages -->
@@ -64,7 +65,7 @@
       <form id="message-form">
         <div class="input-group mb-3">
           <input id="message-input" type="text" class="form-control" placeholder="Write a message..." aria-label="Write a message..." aria-describedby="message-send">
-          <button class="btn btn-primary" type="submit" id="message-send">Send Message</button>
+          <button class="btn btn-primary" type="submit" id="message-send"><i class="fa-solid fa-paper-plane"></i> Send</button>
         </div>
       </form>
     </div>
